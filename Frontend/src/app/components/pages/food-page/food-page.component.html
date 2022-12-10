@@ -1,0 +1,59 @@
+<!-- This will Show the not-found Component i.e when the FoodItem is BookMarked and not Available Anymore -->
+<app-not-found
+[visible]="!foodItem"
+notFoundMessage="Item No longer Available..."
+resetLinkText="Back To Home Page"></app-not-found>
+
+<!-- The Main Container -->
+<div *ngIf="foodItem" class="container">
+
+    <!-- the image of the Food -->
+  <img class="image"
+  [src]="foodItem.imageUrl"
+  [alt]="foodItem.name" />
+
+  <!-- To Show the Details i.e Name and Favorite Icon -->
+  <div class="food__details">
+    <div class="food__name">
+      <span class="name">{{ foodItem.name }}</span>
+    </div>
+
+    <div class="rating">
+      <!-- To Sgow the rating -->
+     <star-rating
+     [value]="foodItem.stars"
+     [totalstars]="5"
+     checkedcolor="red"
+     uncheckedcolor="gray"
+     size="22px"
+     [readonly]="true"></star-rating>
+    </div>
+
+    <!-- This will Show CookTime -->
+     <!-- the Cook time -->
+  <div class="cookTime">
+    <span>Time to cook about <strong>{{ foodItem.cookTime }}</strong> Minutes</span>
+  </div>
+
+  <!-- to Show the origins -->
+  <div class="origins">
+    <span *ngFor="let origin of foodItem.origins">{{ origin | titlecase }}</span>
+  </div>
+
+
+  <!-- The Price of the item -->
+  <div class="price">
+    <span><fa-icon [icon]="rupeeIcon"></fa-icon>
+      {{ foodItem.price }}</span>
+  </div>
+
+  <!-- button to Add the item to Cart -->
+  <button
+  (click)="onAddToCart()"
+  class="addTo__cart">Add to Cart</button>
+  </div>
+  <!-- The Tags -->
+  <!-- <div class="tags">
+    <a *ngFor="let tag of foodItem.tags">{{ tag | titlecase }}</a>
+  </div> -->
+</div>
