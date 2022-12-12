@@ -223,7 +223,7 @@ export const sampleFoods: any[] = [
     imageUrl: 'https://www.holidify.com/images/cmsuploads/compressed/Kimchi-5_20181227134514.jpg',
     tags: ['Lunch', 'Dinner'],
   },
-]
+];
 
 // To Get the Tags for Food
 // In the Begining Change Food[] to any[] && Tag[] to any[]
@@ -236,4 +236,23 @@ export const sampleTags: any[] = [
   { name: 'Fry', count: 1 },
   { name: 'Soup', count: 1 },
   { name: 'Hamburger', count: 1 },
-]
+];
+
+// Users Array
+// sample Users to test the Api
+export const sampleUsers: any[] = [
+  { 
+    name: 'Vinay',
+    email: 'test@gmail.com', 
+    password: '123456', 
+    address: 'L.A', 
+    isAdmin: true 
+  },
+  { 
+    name: 'Vinay', 
+    email: 'test2@gmail.com', 
+    password: '123456', 
+    address: 'NYC', 
+    isAdmin: false 
+  },
+];

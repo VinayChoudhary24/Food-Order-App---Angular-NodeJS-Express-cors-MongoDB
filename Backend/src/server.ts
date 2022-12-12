@@ -2,11 +2,15 @@
 // to Remove Import Error Click on QuickFix and install @typess/express && install @types/cors
 import express from "express";
 import cors from "cors";
-import { sampleFoods, sampleTags } from "./data";
+import { sampleFoods, sampleTags, sampleUsers } from "./data";
+import jwt from "jsonwebtoken"
 
 // the const app is now Express Application
 // All the Api's are Defined inside const app 
 const app = express();
+
+// Enable Json in Expres
+app.use(express.json());
 
 // For Frontend we use localhost:4200, now the localhost Changes so we need CORS for this
 // declare an Object inside cors() to use
@@ -57,6 +61,41 @@ app.get("/api/foods/:foodId", (req, res) => {
     res.send(foods);
 })
 
+// POST Api, to POST the Login Details from Frontend to Database
+app.post("/api/users/login", (req, res) => {
+    // to get the Body of Request
+    // const body = req.body;
+
+    // Instead of getting the Body we can DE-STRUCTURE email and Password like this
+    // DESTRUCTURE the email and password
+    const { email, password } = req.body;
+    // Find the User
+    const user = sampleUsers.find( user => user.email === email && user.password === password);
+    // Check if the User is Available or Not
+    if(user) {
+        // User is Available/Found i.e send Successfull Response that contains user and Token Value
+        res.send(generateTokenResponse(user))
+    }else {
+        // User is Not Available/Not Found i.e send Error Status and Message
+        res.status(400).send("Email or Password is not valid!!");
+    }
+})
+
+// This Function will generate Token Response
+const generateTokenResponse = (user: any) => {
+    // sign()-- Process of Generating Token
+    // The First Parameter is What we Want in the Code and 
+    // Second Parameter is the SECRET KEY and 
+    // Third Parameter is Options i.e Expiry of Token
+    const token = jwt.sign({
+        email: user.email, 
+        isAdmin: user.isAdmin,
+    }, "SomeRandomText", {
+        expiresIn: "30d"
+    });
+    user.token = token;
+    return user;
+} 
 
 // Define a Port to Listen the API Requests
 const port = 5000;

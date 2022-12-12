@@ -53,20 +53,22 @@
       <nav>
       <div class="user__details">
         <ul>
-          <li>
+          <!-- This *ngIf will Hide if the  User is Already logged in -->
+          <li *ngIf="!isAuth">
             <a
             routerLink="/login"
             class="user__login">Login</a>
           </li>
-          <li class="user__menu">
+          <li *ngIf="isAuth" class="user__menu">
             <div class="dropdown">
-              <a routerLink="/dashboard">User</a>
+              <!-- Get the Name of user from userName Property -->
+              <a routerLink="/dashboard">{{ user.name }}</a>
 
             <!-- The Othe Features -->
             <div class="dropdown__menu">
               <a class="dropdown-item" routerLink="/profile">Profile</a>
               <a class="dropdown-item" routerLink="/orders">Orders</a>
-              <a class="dropdown-item" routerLink="">Logout</a>
+              <a (click)="onLogout()" class="dropdown-item" routerLink="">Logout</a>
             </div>
             </div>
           </li>

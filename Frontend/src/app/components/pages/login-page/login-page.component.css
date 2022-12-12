@@ -1,0 +1,38 @@
+/* This will show the Input fields border red if they are Invalid and Touched */
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+/* The Login Message */
+.login__message {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
+    background-color: lightgray;
+    color: brown;
+}
+
+/* the Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 3rem;
+}
+
+/* The Details Section  */
+.details {
+    width: 28rem;
+}
+
+/* The Login Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

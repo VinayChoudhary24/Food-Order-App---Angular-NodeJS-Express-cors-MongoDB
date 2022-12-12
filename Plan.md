@@ -78,7 +78,33 @@
      * Add urls.ts to Frontend/src/shared/constants-- To Manage All the URL's
      * Add HttpClientModule to the project-- To Request to backend API's from Frontend foodService
      * Request Backend API's inside the foodService -- Import HttpClient in foodService
-     * Fix the Components of Each API Requests i.e Home, Food-Page, Cart-Page -- Subscribe To the http Requests
+     * Fix the Components of Each API Requests i.e Home, Food-Page, Cart-Page -- Subscribe To the http Requests.
+
+ # 3 Creating the Login/SignUp Functionality
+     * --Frontend- Generate Login Page Component 
+     * --Frontend- Add Angular Reactive Forms to the login Page.ts-- import ReactiveFormsModule in imports[] of app.module.ts 
+     * --Backend-Server.ts- Add Login Api- 
+                                  --Enable json in Express,
+                                  --Add sampleUsers in data.ts to test 
+                                  --Add jsonwebtoken --npm install jsonwebtoken --a Function GenerateTokenResponse 
+                                  --test Using Postman -- Save POST request
+
+ # 4 Connecting the Login Page with the Backend
+     * --Generate User Service --userService.ts
+     * --Create User Model inside the Shared Folder --User.ts
+     * --Create UserLogin interface --Shared/interfaces/
+     * --install ngx-toastr i.e npm install ngx-toastr --To Show POP-UP Message of Successful/Failed Login and 
+                  Dis-appears after Few Seconds.
+                            -- Import Module in app.module
+                            -- Import BrowserAnimationsModule in app.module
+                            -- Add this -"node_modules/ngx-toastr/toastr.css" in Styles[] in Angular.json.
+     * --Create Logout() method in userService
+     * --Make Components for Login Page
+                            -- Input Container
+                            -- Input Validation
+                            -- Text input
+                            -- Default Button 
+
 
 
 

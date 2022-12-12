@@ -1,0 +1,57 @@
+<!-- To Show the Login Message -->
+<div *ngIf="loginMessage" class="login__message">
+    <p>{{ loginMessage }}</p>
+</div>
+<!-- The Main Form Container -->
+<div class="container">
+    <div class="details">
+        <!-- the Heading of the Page -->
+        <app-cart-page-title title="Login"></app-cart-page-title>
+
+        <!-- the Form -->
+        <form
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()">
+
+        <!-- the Input Container i.e email -->
+      <input-container label="Enter Email">
+        <input
+        type="email"
+        placeholder="Enter Email"
+        formControlName="email" />
+        <!-- To Show the Error Message -->
+        <div
+        *ngIf="formControl.email.errors && isSubmitted"
+        class="error__list">
+        <!-- When the email Field is Empty -->
+        <div *ngIf="formControl.email.errors.required">Email is required</div>
+        <div *ngIf="formControl.email.errors.email">Email is not valid</div>
+      </div>
+      </input-container>
+      <!-- The Input Container -- Password -->
+      <input-container>
+        <!-- the Input Container i.e password -->
+        <input
+        type="password"
+        placeholder="Enter Password"
+        formControlName="password" />
+        <!-- To Show the Error Message -->
+        <div
+        *ngIf="formControl.password.errors && isSubmitted"
+        class="error__list">
+        <!-- When the email Field is Empty -->
+        <div *ngIf="formControl.password.errors.required">Password is required</div>
+      </div>
+      </input-container>
+
+      <!-- The Button Container -->
+      <input-container>
+        <!-- The Button Container -->
+        <div class="button">
+            <button type="submit"
+            class="btn btn-success">Login</button>
+        </div>
+      </input-container>
+    </form>
+    </div>
+</div>
