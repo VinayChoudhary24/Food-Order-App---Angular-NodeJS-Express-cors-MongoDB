@@ -11,6 +11,7 @@ export class Food {
   imageUrl!: string;
   origins!: string[];
   cookTime!: string;
+}
 
   // constructor( id: string, name: string, price: number, tags: string[], favorite: boolean, stars: number,
   //               imageUrl: string, origins: string[], cookTime: string ) {
@@ -25,5 +26,5 @@ export class Food {
   //                 this.origins = origins;
   //                 this.cookTime = cookTime;
   //               }
-}
+
 

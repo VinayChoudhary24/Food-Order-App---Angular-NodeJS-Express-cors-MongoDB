@@ -103,7 +103,36 @@
                             -- Input Container
                             -- Input Validation
                             -- Text input
-                            -- Default Button 
+                            -- Default Button
+
+ # 5 Connect Login API to MongoDB Atlas
+     * --Moving api's into routers Folder --Create a Router Folder, inside food.router.ts and user.router.ts
+     * --Create MongoDB Atlas --Atlas is Faster than the MongoDB Local
+     * --Create .env file
+     * --Install --npm install mongoose dotenv bcryptjs express-async-handler
+               --Mongoose --Creating Models, Specific Types, Save to Database and Work with MongoDB --Security 
+               --dotenv
+               --bcryptjs --Saving the Password inside the Database, Secures the Password
+               --jsonWebToken --Already Installed
+               --express-async-handler --To Make Async Process More Consistent
+     * --Create a database.config.ts File to Connect mongoose to MongoDB Atlas --Create Configs Folder
+     * --Connect to MongoDB Atlas
+     * --Create mongoose Models i.e food.model.ts --Create Models Folder
+                         --Food interface --Copy From Frontend Food interface i.e Food.ts from Shared/models
+                         --Food Schema --Define in MonogoDB Types
+                         --Food Model
+     * --Create mongoose models i.e user.model.ts --inside Models Folder
+                         --User interface --Copy From Frontend User Interface i.e User.ts from Shared/models
+                         --User Schema --Define in MonogoDB Types
+                         --User Model
+     * --Now SEED the food.model.ts and user.model.ts inside the DATABASE 
+                          --Add Two Api's inside the food.router.ts and user.router.ts
+                          --Getting the Values from data.ts and Put it inside the Database             
+     * --Use MongoDB instead of data.ts in apis
+                          --Browser Collection inside MongoDB Atlas and Request Backend i.e http://localhost:5000/api/foods/seed to Put All the Data from data.ts to MongoDB Atlas. 
+                           --Browser Collection inside MongoDB Atlas and Request Backend i.e http://localhost:5000/api/users/seed to Put All the Data from data.ts to MongoDB Atlas.
+                           --Update All the Api's inside routers[food.router and user.router] to get Data From Data.ts => MongoDB
+                                             
 
 
 

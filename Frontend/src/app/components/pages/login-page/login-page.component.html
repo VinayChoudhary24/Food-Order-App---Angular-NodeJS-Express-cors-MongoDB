@@ -13,45 +13,25 @@
         [formGroup]="loginForm"
         (ngSubmit)="onSubmit()">
 
-        <!-- the Input Container i.e email -->
-      <input-container label="Enter Email">
-        <input
-        type="email"
-        placeholder="Enter Email"
-        formControlName="email" />
-        <!-- To Show the Error Message -->
-        <div
-        *ngIf="formControl.email.errors && isSubmitted"
-        class="error__list">
-        <!-- When the email Field is Empty -->
-        <div *ngIf="formControl.email.errors.required">Email is required</div>
-        <div *ngIf="formControl.email.errors.email">Email is not valid</div>
-      </div>
-      </input-container>
-      <!-- The Input Container -- Password -->
-      <input-container>
-        <!-- the Input Container i.e password -->
-        <input
-        type="password"
-        placeholder="Enter Password"
-        formControlName="password" />
-        <!-- To Show the Error Message -->
-        <div
-        *ngIf="formControl.password.errors && isSubmitted"
-        class="error__list">
-        <!-- When the email Field is Empty -->
-        <div *ngIf="formControl.password.errors.required">Password is required</div>
-      </div>
-      </input-container>
+      <!-- The Email Section i.e text-input Component -->
+      <text-input
+      [control]="formControl.email"
+      [showErrorsWhen]="isSubmitted"
+      type="email"
+      label="Enter Email"></text-input>
 
-      <!-- The Button Container -->
-      <input-container>
-        <!-- The Button Container -->
-        <div class="button">
-            <button type="submit"
-            class="btn btn-success">Login</button>
-        </div>
-      </input-container>
+      <!-- The Password Section i.e text-input Component -->
+      <text-input
+      [control]="formControl.password"
+      [showErrorsWhen]="isSubmitted"
+      type="password"
+      label="Enter Password"></text-input>
+
+        <!-- The Button Container i.e default-button Component -->
+        <default-button
+        bgColor="#3A833A"
+        text="Login"></default-button>
+
     </form>
     </div>
 </div>
