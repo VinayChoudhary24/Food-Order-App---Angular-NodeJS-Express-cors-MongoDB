@@ -32,6 +32,16 @@
         bgColor="#3A833A"
         text="Login"></default-button>
 
+        <!-- if the User is New and Wants to Create a Account -->
+        <!-- Link to Direct User to Register Page -->
+        <div class="register">
+            <!-- &nbsp; is Used for White Space -->
+            New User? &nbsp;
+            <a
+            routerLink="/register"
+            [queryParams]="{returnUrl: returnUrl}">Register Here</a>
+        </div>
+
     </form>
     </div>
 </div>

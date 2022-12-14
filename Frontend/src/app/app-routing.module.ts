@@ -4,6 +4,7 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
+import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 
 const routes: Routes = [
 
@@ -24,6 +25,9 @@ const routes: Routes = [
 
   // To Load the Login Page
   { path: 'login', component: LoginPageComponent },
+
+  // To Load the Register Page
+  { path: 'register', component: RegisterPageComponent },
 
 ];
 

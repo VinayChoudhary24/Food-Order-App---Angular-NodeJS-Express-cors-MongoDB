@@ -132,6 +132,14 @@
                           --Browser Collection inside MongoDB Atlas and Request Backend i.e http://localhost:5000/api/foods/seed to Put All the Data from data.ts to MongoDB Atlas. 
                            --Browser Collection inside MongoDB Atlas and Request Backend i.e http://localhost:5000/api/users/seed to Put All the Data from data.ts to MongoDB Atlas.
                            --Update All the Api's inside routers[food.router and user.router] to get Data From Data.ts => MongoDB
+     * --Register User 
+                     --Register Component,
+                     --Create a Http File for All Request Status-- src/Constants/http_status.ts 
+                     --Add Register Api, Inside the user.router.ts 
+                     --Register Service Method, inside the user.service.ts and Create UserRegister interface inside 
+                        shared/interfaces/UserRegister.ts, add Register URL in shared/constants/urls.ts
+                     --Register Link
+                
                                              
 
 

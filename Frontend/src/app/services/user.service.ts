@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 // import { ToastrService } from 'ngx-toastr/public_api';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { USER_LOGIN_URL } from '../shared/models/constants/urls';
+import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/models/constants/urls';
 import { UserLogin } from '../shared/models/interfaces/UserLogin';
+import { UserRegister } from '../shared/models/interfaces/UserRegister';
 import { User } from '../shared/models/User';
 
 // The Key to Store the User in LocalStorage
@@ -25,7 +26,7 @@ export class UserService {
 
   constructor( private http: HttpClient,
               //  Inject Toastr Message for Success and Login
-                // private toastrService: ToastrService 
+                // private toastrService: ToastrService
                 ) {
     // store the Subject in Observable
     this.userObservable = this.userSubject.asObservable();
@@ -41,10 +42,32 @@ export class UserService {
         next: (user) => {
           // Set the User to LocalStorage After Successful Login
           this.setUserToLocalStorage(user);
+          //  To Notify/update all the observables
           this.userSubject.next(user);
         },
         // Login Failed
         error: (errorResponse) => {
+          alert("Login Failed...");
+        }
+      })
+    )
+  }
+
+  // Register the New User
+  register(userRegister: UserRegister): Observable<User> {
+    // Pipe the TAP Method to Show a DIALOG MESSAGE BOX for Successful Login
+    return this.http.post<User>(USER_REGISTER_URL, userRegister).pipe(
+      tap({
+        // Successful Register
+        next: (user) => {
+           // Set the User to LocalStorage After Successful Login
+           //  To Notify/update all the observables
+           this.setUserToLocalStorage(user);
+          this.userSubject.next(user);
+        },
+        // Register Failed
+        error: (errorResponse) => {
+          alert("Registration Failed...")
         }
       })
     )
@@ -56,13 +79,13 @@ export class UserService {
     this.userSubject.next(new User());
     // Remove the User from LocalStorage
     localStorage.removeItem(USER_KEY);
-    // This Will Re-fresh the Page 
+    // This Will Re-fresh the Page
     window.location.reload();
   }
 
   // To Store the User Details in LocalStorage
   private setUserToLocalStorage(user: User) {
-    localStorage.setItem(USER_KEY, JSON.stringify(user)); 
+    localStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 
   // To Get the User Details from LocalStorage

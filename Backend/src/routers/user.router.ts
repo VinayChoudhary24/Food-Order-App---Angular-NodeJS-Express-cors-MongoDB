@@ -3,7 +3,9 @@
 import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
 import { sampleUsers } from "../data";
-import { UserModel } from "../models/user.model";
+import { User, UserModel } from "../models/user.model";
+import { HTTP_BAD_REQUEST } from "../constants/http_status";
+import bcrypt from "bcryptjs";
 
 // Import Router from Express to replace app. => router.
 import { Router } from "express";
@@ -46,8 +48,37 @@ router.post("/login", asyncHandler(
             res.send(generateTokenResponse(user))
         }else {
             // User is Not Available/Not Found i.e send Error Status and Message
-            res.status(400).send("Email or Password is not valid!!");
+            res.status(HTTP_BAD_REQUEST).send("Email or Password is not valid!!");
         }
+    }
+));
+
+// The New User Register API
+router.post("/register", asyncHandler(
+    async (req, res) => {
+        // The New User Details Required
+        // DE-STRUCTURE the User Details
+        const { name, email, password, address } = req.body;
+        // Check if the User Already Exists with Same name, email... Details
+        const user = await UserModel.findOne({email});
+        if(user) {
+            res.status(HTTP_BAD_REQUEST).send("User is already exist, please login!");
+            return;
+        }
+        // To Protect the New User Password-- make it Encrypted i.e HASH
+        const encryptedPassword = await bcrypt.hash(password, 10);
+        // Creating the New User
+        const newUser:User = {
+            id: '',
+            name,
+            email: email.toLowerCase(),
+            password: encryptedPassword,
+            address,
+            isAdmin: false  
+        }
+        // Save the User in the Database
+        const dbUser = await UserModel.create(newUser);
+        res.send(generateTokenResponse(dbUser));  
     }
 ))
 

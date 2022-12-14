@@ -23,3 +23,6 @@ export const FOODS_BY_ID_URL = FOODS_URL + '/';
 
 // This will Give the user Login Page
 export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
+
+// This Will Register a New User
+export const USER_REGISTER_URL = BASE_URL + '/api/users/register';

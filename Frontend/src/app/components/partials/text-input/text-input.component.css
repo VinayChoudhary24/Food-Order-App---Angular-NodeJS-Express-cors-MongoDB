@@ -10,7 +10,7 @@ input {
 }
 
 input::placeholder {
-    color: #dfdfdf;
+    color: #b4b1b1;
     font-size: 1rem;
     font-weight: 500;
 }
