@@ -139,6 +139,28 @@
                      --Register Service Method, inside the user.service.ts and Create UserRegister interface inside 
                         shared/interfaces/UserRegister.ts, add Register URL in shared/constants/urls.ts
                      --Register Link
+     * --Loading
+                --Add Pure CSS Loader.com 
+                --Add Component
+                --Add Service --Services/loading.service.ts
+                --Add LoadingComponent inside the app.component.html
+                --Add Interceptor --To Show Loader for Different Components ThroughOut the Application, 
+                                     shared/interceptors/loading.interceptor.ts and 
+                                     Update app.module.ts Import {HTTP_INTERCEPTORS} from common/http... 
+                                     and Providers[{provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}]
+     * --Checkout Page
+               --Create Order Model --shared/model/Order.ts
+               --Checkout Page Component --add Router
+               --Add User to User.Service --Adding public get currentUser
+               --Add Cart to Cart.Service --Adding getCart Method
+               --Create Order Items List Component --components/partials/order-items-list
+     * --Adding MAP to the Checkout Page
+            --Add Leaflet Package, --npm install leaflet --Add @types/leaflet, npm install --save-dev @types/leaflet 
+            --Add CSS to angular.json --Inside Styles["node_modules/leaflet/dist/leaflet.css"]
+            --Add this -addressLatLng?:LatLng to Order.ts Model --To Store the Address Latitude and Longitude from Leaflet  
+            --Create Map Component --Add to Checkout Page -Change app-map Selector to map
+            --Generate Location Service --services/location.service.ts --to Get the Current Location of User
+            --Add AuthGuard --To Restrict the User Frm opening Some Pages if Not Logged In
                 
                                              
 

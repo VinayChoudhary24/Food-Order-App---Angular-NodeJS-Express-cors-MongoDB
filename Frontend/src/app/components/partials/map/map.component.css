@@ -1,0 +1,34 @@
+/* the Main Container */
+.container {
+    position: relative;
+    width: 30rem;
+    height: 24rem;
+    text-align: center;
+}
+
+/* Contains the map */
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+/* The Find My Location button */
+.find__location {
+    position: absolute;
+    margin: auto;
+    width: 15rem;
+    min-height: 2.5rem;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid black;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ffffff7c;
+    cursor: pointer;
+}
+
+.find__location:hover {
+    background-color: white;
+}

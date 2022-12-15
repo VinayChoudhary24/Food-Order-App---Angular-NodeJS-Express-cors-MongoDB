@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/guards/auth.guard';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
@@ -28,6 +30,9 @@ const routes: Routes = [
 
   // To Load the Register Page
   { path: 'register', component: RegisterPageComponent },
+
+  // To Load the Checkout Page
+  { path: 'checkout', component: CheckoutPageComponent, canActivate: [AuthGuard] },
 
 ];
 

@@ -57,6 +57,11 @@ export class HeaderComponent implements OnInit {
     })
   }
 
+  // Condition to Check if the User is Valid to Show and Hide Different Options i.e Login, Logout, details...
+  get isAuth() {
+    return this.user.email;
+  }
+
    // To show the Searched Results
   search(term: string) {
     if(term) {
@@ -67,11 +72,6 @@ export class HeaderComponent implements OnInit {
   // This will Call the Function logout from userService
   onLogout() { 
     this.userService.logout();
-  }
-
-  // Condition to Check if the User is Valid to Show and Hide Different Options i.e Login, Logout, details...
-  get isAuth() {
-    return this.user.token;
   }
 
 }

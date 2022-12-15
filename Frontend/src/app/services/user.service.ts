@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 // import { ToastrService } from 'ngx-toastr/public_api';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/models/constants/urls';
-import { UserLogin } from '../shared/models/interfaces/UserLogin';
-import { UserRegister } from '../shared/models/interfaces/UserRegister';
+import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/urls';
+import { UserLogin } from '../shared/interfaces/UserLogin';
+import { UserRegister } from '../shared/interfaces/UserRegister';
 import { User } from '../shared/models/User';
 
 // The Key to Store the User in LocalStorage
@@ -30,6 +30,11 @@ export class UserService {
                 ) {
     // store the Subject in Observable
     this.userObservable = this.userSubject.asObservable();
+  }
+
+  // To get the User to Checkout Page
+  public get currentUser():User {
+    return this.userSubject.value;
   }
 
   // the Login Method

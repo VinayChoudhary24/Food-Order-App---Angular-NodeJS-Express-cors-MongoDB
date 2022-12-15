@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
-import { UserRegister } from 'src/app/shared/models/interfaces/UserRegister';
-import { PasswordsMatchValidator } from 'src/app/shared/models/validators/password_match_validator';
+import { UserRegister } from 'src/app/shared/interfaces/UserRegister';
+import { PasswordsMatchValidator } from 'src/app/shared/validators/password_match_validator';
 
 @Component({
   selector: 'app-register-page',
@@ -28,7 +28,7 @@ export class RegisterPageComponent implements OnInit {
   ngOnInit(): void {
     // Create the Register Form
     this.registerForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(5)]],
+      name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(7)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],

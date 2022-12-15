@@ -63,8 +63,14 @@ export class CartService {
     this.setCartToLocalStorage();
   }
 
+  // to Inform About the State of the Cart to Other Components
   getCartObservable():Observable<Cart> {
     return this.cartSubject.asObservable();
+  }
+
+  // For the Checkout Page
+  getCart():Cart {
+    return this.cartSubject.value;
   }
 
   // Setting Cart Data to LoaclStorage
