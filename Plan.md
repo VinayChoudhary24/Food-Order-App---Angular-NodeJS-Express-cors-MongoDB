@@ -80,7 +80,7 @@
      * Request Backend API's inside the foodService -- Import HttpClient in foodService
      * Fix the Components of Each API Requests i.e Home, Food-Page, Cart-Page -- Subscribe To the http Requests.
 
- # 3 Creating the Login/SignUp Functionality
+ # 3 Creating the Login Functionality
      * --Frontend- Generate Login Page Component 
      * --Frontend- Add Angular Reactive Forms to the login Page.ts-- import ReactiveFormsModule in imports[] of app.module.ts 
      * --Backend-Server.ts- Add Login Api- 
@@ -132,14 +132,16 @@
                           --Browser Collection inside MongoDB Atlas and Request Backend i.e http://localhost:5000/api/foods/seed to Put All the Data from data.ts to MongoDB Atlas. 
                            --Browser Collection inside MongoDB Atlas and Request Backend i.e http://localhost:5000/api/users/seed to Put All the Data from data.ts to MongoDB Atlas.
                            --Update All the Api's inside routers[food.router and user.router] to get Data From Data.ts => MongoDB
-     * --Register User 
+ 
+ # 6 Create Register Functionality
                      --Register Component,
                      --Create a Http File for All Request Status-- src/Constants/http_status.ts 
                      --Add Register Api, Inside the user.router.ts 
                      --Register Service Method, inside the user.service.ts and Create UserRegister interface inside 
                         shared/interfaces/UserRegister.ts, add Register URL in shared/constants/urls.ts
                      --Register Link
-     * --Loading
+ 
+ # 7 Adding the Loading Spinner -- Pure CSS Loader
                 --Add Pure CSS Loader.com 
                 --Add Component
                 --Add Service --Services/loading.service.ts
@@ -148,13 +150,15 @@
                                      shared/interceptors/loading.interceptor.ts and 
                                      Update app.module.ts Import {HTTP_INTERCEPTORS} from common/http... 
                                      and Providers[{provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}]
-     * --Checkout Page
+     
+ # 8 Create Checkout Page
                --Create Order Model --shared/model/Order.ts
                --Checkout Page Component --add Router
                --Add User to User.Service --Adding public get currentUser
                --Add Cart to Cart.Service --Adding getCart Method
                --Create Order Items List Component --components/partials/order-items-list
-     * --Adding MAP to the Checkout Page
+     
+ # 9 Adding Map Feature to the Application
             --Add Leaflet Package, --npm install leaflet --Add @types/leaflet, npm install --save-dev @types/leaflet 
             --Add CSS to angular.json --Inside Styles["node_modules/leaflet/dist/leaflet.css"]
             --Add this -addressLatLng?:LatLng to Order.ts Model --To Store the Address Latitude and Longitude from Leaflet  
