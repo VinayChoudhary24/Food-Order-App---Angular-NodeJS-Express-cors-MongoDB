@@ -89,13 +89,21 @@ const generateTokenResponse = (user: any) => {
     // Second Parameter is the SECRET KEY and 
     // Third Parameter is Options i.e Expiry of Token
     const token = jwt.sign({
+        id: user.id,
         email: user.email, 
         isAdmin: user.isAdmin,
-    }, "SomeRandomText", {
-        expiresIn: "30d"
+    }, "process.env.JWT_SECRET!", {
+        expiresIn: "3000d"
     });
-    user.token = token;
-    return user;
+    return {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        address: user.address,
+        isAdmin: user.isAdmin,
+        token: token
+    };
 }
 
+// Put This to Use userRouter inside the server.ts
 export default router;

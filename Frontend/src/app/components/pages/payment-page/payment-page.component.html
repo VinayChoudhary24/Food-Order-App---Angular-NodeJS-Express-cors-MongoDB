@@ -1,0 +1,44 @@
+<!-- Completely Similar to the Checkout Page -->
+<div class="container">
+  <div class="content">
+      <!-- theApp title Component -->
+      <app-cart-page-title title="Order Summary" fontSize="1.6rem"></app-cart-page-title>
+      <hr>
+
+      <!-- Summary Details  -->
+      <div class="summary">
+        <div style="margin-bottom: 5px;">
+          <h5>Name:</h5>
+          <span>{{order.name}}</span>
+        </div>
+        <div>
+          <h5>Address:</h5>
+          <span>{{order.address}}</span>
+        </div>
+      </div>
+
+  <!-- Render the Order-Items-List Component -->
+  <order-items-list [order]="order"></order-items-list>
+  </div>
+
+  <!-- the MAP Section -->
+  <div class="map">
+      <!-- app title Component -->
+      <app-cart-page-title
+      title="Shipping Address"
+      fontSize="1.6rem"></app-cart-page-title>
+
+      <!-- Render the MAP Component -->
+      <!-- Define [order] to get the Location by Clicking the Button Find My Location -->
+      <!-- [readonly] will Show Just Marker Selected from Checkoout Page -->
+      <map [order]="order" [readonly]="true"></map>
+
+      <!-- The Buttons Container --Payment Button -->
+      <div class="buttons__container">
+          <div class="buttons">
+              <!-- <button (click)="createOrder()">Go To Payment</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+

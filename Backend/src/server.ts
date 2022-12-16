@@ -11,6 +11,7 @@ import cors from "cors";
 
 import foodRouter from './routers/food.router';
 import userRouter from './routers/user.router';
+import orderRouter from './routers/order.router';
 
 // Import dbConnect
 import { dbConnect } from './configs/database.config';
@@ -32,11 +33,14 @@ app.use(cors({
     origin: ["http://localhost:4200"]
 }));
 
-// Use the food.router.ts here
+// Connect the food.router.ts here
 app.use("/api/foods", foodRouter);
 
-// Use the user.router.ts
-app.use("/api/users", userRouter)
+// Connect the user.router.ts
+app.use("/api/users", userRouter);
+
+// Connect the order.router.ts
+app.use("/api/orders", orderRouter);
 
 // Define a Port to Listen the API Requests
 const port = 5000;

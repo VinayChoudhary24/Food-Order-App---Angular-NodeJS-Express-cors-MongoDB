@@ -67,7 +67,7 @@ export class LoginPageComponent implements OnInit {
       this.loginMessage = "Welcome to Madani!! Login Successful"
       setTimeout( () => {
         this.router.navigateByUrl(this.returnUrl);
-      }, 2500)
+      }, 2000)
     });
     }
   }

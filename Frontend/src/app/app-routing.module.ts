@@ -6,6 +6,7 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 
 const routes: Routes = [
@@ -33,6 +34,9 @@ const routes: Routes = [
 
   // To Load the Checkout Page
   { path: 'checkout', component: CheckoutPageComponent, canActivate: [AuthGuard] },
+
+  // To Load the Payment Page
+  { path: 'payment', component: PaymentPageComponent, canActivate: [AuthGuard] },
 
 ];
 

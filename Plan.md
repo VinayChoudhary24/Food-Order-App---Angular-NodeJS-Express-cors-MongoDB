@@ -152,7 +152,7 @@
                                      and Providers[{provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}]
      
  # 8 Create Checkout Page
-               --Create Order Model --shared/model/Order.ts
+               --Create Order Model --shared/model/Order.ts in Frontend
                --Checkout Page Component --add Router
                --Add User to User.Service --Adding public get currentUser
                --Add Cart to Cart.Service --Adding getCart Method
@@ -165,6 +165,26 @@
             --Create Map Component --Add to Checkout Page -Change app-map Selector to map
             --Generate Location Service --services/location.service.ts --to Get the Current Location of User
             --Add AuthGuard --To Restrict the User Frm opening Some Pages if Not Logged In
+
+ # 10 Save Order Details on Backend -- MongoDB
+           --Order Model --Create Order.model.ts inside Backend -- models/order.model.ts i.e interface, Schema, Model
+           --Add Order Status Enum --Frontend/shared/constants/order_status.ts --for Order Status i.e Shipped, Paid ....
+           --Add Auth Middleware --middleware/auth.mid.ts --To Verify the User Token
+           --Add Order Router --routers/order.router.ts --For Storing the OrderModel to DB
+                       --Add Create API
+           --Add Order Urls to urls.ts --To Connect order Backend to Frontend
+           --Add Order Service --services/order.service.ts
+                      --Add Create Method
+           --Add Auth Interceptor -ng g interceptor auth/auth
+
+ # 11 Creating the Payment Page
+           --Generate Component --components/pages/payment-page
+           --Add router Method to get the Order Details --order.router
+           --Add router to Urls.ts 
+           --Add 'getOrderForCurrentUser' api
+           --Add Order Service Method --getNewOrderForCurrentUser
+           --Connect Component to Service
+           --Make the map component readonly --map.component.ts
                 
                                              
 

@@ -4,6 +4,7 @@
     <tr>
         <td colspan="5">
             <h3>Ordered Items: </h3>
+            <hr>
         </td>
     </tr>
     <!-- The Order Items Loop -->
@@ -11,7 +12,7 @@
         <!-- Image of Item -->
         <td>
             <a routerLink="/food/{{item.food.id}}">
-                <img 
+                <img
                 [src]="item.food.imageUrl" alt="" />
             </a>
         </td>
@@ -42,7 +43,7 @@
         </td>
         <td>
             <strong>
-                {{order.totalPrice}}
+                {{order.totalPrice + 100}}
             </strong>
         </td>
     </tr>

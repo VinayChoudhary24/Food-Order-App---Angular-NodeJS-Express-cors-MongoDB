@@ -1,7 +1,7 @@
 // This Contains All the Api's for Food i.e Moved From server.ts
 // EXPORT DEFAULT to Use this food.router.ts inside the Server.ts
 
-import { sampleFoods, sampleTags } from "../data";
+import { sampleFoods } from "../data";
 import asyncHandler from "express-async-handler";
 import { FoodModel } from "../models/food.model";
 

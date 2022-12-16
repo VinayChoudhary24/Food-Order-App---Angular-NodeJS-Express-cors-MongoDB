@@ -32,9 +32,9 @@ export class HeaderComponent implements OnInit {
 
   // Inject two Dependencies For the Searched Input
   constructor( private activatedRoute: ActivatedRoute,
-    private router: Router, 
+    private router: Router,
     // Inject CartService to Change the header Cart Quantity
-    private cartService: CartService, 
+    private cartService: CartService,
     // Inject UserService to Get the Name of the User in the Header
     private userService: UserService,
     ) {
@@ -59,7 +59,7 @@ export class HeaderComponent implements OnInit {
 
   // Condition to Check if the User is Valid to Show and Hide Different Options i.e Login, Logout, details...
   get isAuth() {
-    return this.user.email;
+    return this.user.token;
   }
 
    // To show the Searched Results
@@ -70,7 +70,7 @@ export class HeaderComponent implements OnInit {
   }
 
   // This will Call the Function logout from userService
-  onLogout() { 
+  onLogout() {
     this.userService.logout();
   }
 

@@ -4,18 +4,18 @@
         <app-cart-page-title title="Your Order Details" fontSize="1.6rem"></app-cart-page-title>
 
         <!-- the order Form -->
-        <form 
-        [formGroup]="checkoutForm" 
+        <form
+        [formGroup]="checkoutForm"
         (ngSubmit)="createOrder()">
-        
+
         <!-- the Name of the User -->
-        <text-input 
-        [control]="fc.name" 
+        <text-input
+        [control]="fc.name"
         label="Name"></text-input>
 
         <!-- The Address to Deliver -->
-        <text-input 
-        [control]="fc.address" 
+        <text-input
+        [control]="fc.address"
         label="Address"></text-input>
     </form>
 
@@ -26,8 +26,8 @@
     <!-- the MAP Section -->
     <div class="map">
         <!-- app title Component -->
-        <app-cart-page-title 
-        title="Choose Your Location On Map" 
+        <app-cart-page-title
+        title="Choose Your Location On Map"
         fontSize="1.6rem"></app-cart-page-title>
 
         <!-- Render the MAP Component -->
@@ -37,7 +37,7 @@
         <!-- The Buttons Container --Payment Button -->
         <div class="buttons__container">
             <div class="buttons">
-                <button (click)="createOrder()">Pay Now</button>
+                <button (click)="createOrder()">Go To Payment</button>
             </div>
         </div>
     </div>
