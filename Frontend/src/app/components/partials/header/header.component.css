@@ -9,7 +9,7 @@ header {
 /* All the a TAGs inside the Header */
 header a {
   text-decoration: none;
-  color: brown;
+  color: #880D1E;
 }
 
 /* When we HOVER on the a TAGs */
@@ -102,7 +102,7 @@ header a:hover {
 
 /* The Cart COUNT */
 .user__details ul a span {
-  color: brown;
+  color: #880D1E;
   padding: 2px 2px;
   font-size: 17px;
 }
