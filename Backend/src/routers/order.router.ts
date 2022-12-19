@@ -39,12 +39,39 @@ router.post('/create', asyncHandler(
 // /For PAYMENT PAGE
 router.get('/newOrderForCurrentUser', asyncHandler(
     async (req: any, res) => {
-        const order = await OrderModel.findOne({user: req.user.id, status: OrderStatus.NEW});
+        const order = await getNewOrderForCurrentUser(req);
         // When the User is Available send the Orde Details
         if(order) res.send(order);
         else res.status(HTTP_BAD_REQUEST).send(); 
     }
 ))
+
+// Api For Paypal Paymnet i.e pay Method
+router.post('/pay', asyncHandler(
+    async (req: any, res) => {
+        // Get the PaymentId from the Body of the Request
+        const {paymentId} = req.body;
+        // get the New Order From the Current User 
+        const order = await getNewOrderForCurrentUser(req);
+        if(!order) {
+            // there is no Order Found
+            res.status(HTTP_BAD_REQUEST).send('Order Not Found...');
+            return;
+        }
+        // Order is Present
+        order.paymentId = paymentId;
+        order.status = OrderStatus.PAID;
+        await order.save();
+
+        // Send the Order Id to the Client
+        res.send(order._id);
+    }
+))
+
+// 
+async function getNewOrderForCurrentUser(req:any) {
+    return await OrderModel.findOne({user: req.user.id, status: OrderStatus.NEW});
+}
 
 // Put This to Use orderRouter inside the server.ts
 export default router;

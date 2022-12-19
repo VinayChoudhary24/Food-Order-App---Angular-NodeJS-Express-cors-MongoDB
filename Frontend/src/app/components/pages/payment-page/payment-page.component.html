@@ -26,7 +26,7 @@
       <!-- app title Component -->
       <app-cart-page-title
       title="Shipping Address"
-      fontSize="1.6rem"></app-cart-page-title>
+      fontSize="1.3rem"></app-cart-page-title>
 
       <!-- Render the MAP Component -->
       <!-- Define [order] to get the Location by Clicking the Button Find My Location -->
@@ -36,7 +36,9 @@
       <!-- The Buttons Container --Payment Button -->
       <div class="buttons__container">
           <div class="buttons">
-              <!-- <button (click)="createOrder()">Go To Payment</button> -->
+              <!-- Render the Paypal Button -->
+              <!-- Pass the Stored Order -->
+              <paypal-button [order]="order"></paypal-button>
           </div>
       </div>
   </div>

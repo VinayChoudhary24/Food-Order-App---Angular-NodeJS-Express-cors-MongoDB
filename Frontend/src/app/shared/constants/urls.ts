@@ -43,6 +43,10 @@ export const ORDER_URL = BASE_URL + '/api/orders';
 // This Will Create a New Order
 export const ORDER_CREATE_URL = ORDER_URL + '/create';
 
-// This will Connect the Backend Payment Api to Frontend
+// This will Connect the Backend Order Api to Frontend
 // This Will get the Order Details From Checkout Page=> Payment Page
 export const ORDER_NEW_FOR_CURRENT_USER_URL = ORDER_URL + '/newOrderForCurrentUser';
+
+// This will Connect the Backend Payment Api to Frontend
+// This Will get the Payment Details From Payment Page
+export const ORDER_PAY_URL = ORDER_URL + '/pay';

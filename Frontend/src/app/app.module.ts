@@ -27,6 +27,7 @@ import { OrderItemsListComponent } from './components/partials/order-items-list/
 import { MapComponent } from './components/partials/map/map.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 // import { ToastrModule } from 'ngx-toastr';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -51,6 +52,7 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
     OrderItemsListComponent,
     MapComponent,
     PaymentPageComponent,
+    PaypalButtonComponent,
   ],
   imports: [
     BrowserModule,
