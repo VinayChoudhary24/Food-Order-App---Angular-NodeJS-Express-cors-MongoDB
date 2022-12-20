@@ -187,7 +187,7 @@
            --Make the map component readonly --map.component.ts
 
  # 12 Adding Paypal
-           --Generate Component --add to Payment Page
+           --Generate Component-components/partials/paypal-button --add to Payment Page
            --get Paypal Client ID --Create Account On developer.paypal.com and get ID
            --Add Paypal JS to index.html
            --set up Paypal Button
@@ -195,6 +195,18 @@
            --Add Api to Urls File
            --Add pay Method to order.service 
            --Get Paypal Sandbox Account
+
+ <!-- # 13 Adding RazorPay
+        --Generate Component-components/partials/razorPay-button --add to Payment Page
+        --get Key ID and Key Secret --Crea a Account on dashboard.razorPay -->
+
+ # 13 Order Track Page
+           --Generate Component components/pages/order-track-page  --Add to Routes
+           --Add Api in order.router
+           --Add to Urls
+           --Add a Method in order.service
+           --Add Ts, Html and Css to Show
+
                 
                                              
 

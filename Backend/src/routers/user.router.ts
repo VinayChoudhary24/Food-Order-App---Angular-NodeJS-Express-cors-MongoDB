@@ -41,9 +41,11 @@ router.post("/login", asyncHandler(
         // Find the User
         // const user = sampleUsers.find( user => user.email === email && user.password === password);
         //## Use findOne({}) to Login in From MongoDB withemail, Password
-        const user = await UserModel.findOne({email, password})
+        const user = await UserModel.findOne({email})
         // Check if the User is Available or Not
-        if(user) {
+        // Check the Password so that the User After Registration can Login SuccessFully i.e When we 
+        // Register a User we bcrypt the Password
+        if(user && (await bcrypt.compare(password, user.password))) {
             // User is Available/Found i.e send Successfull Response that contains user and Token Value
             res.send(generateTokenResponse(user))
         }else {

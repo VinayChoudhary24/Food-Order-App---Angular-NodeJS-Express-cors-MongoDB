@@ -8,8 +8,8 @@ export class Order {
     name!: string;
     address!: string;
     // To Store the Address Latitude and Longitude from Leaflet
-    addressLatLng?:LatLng 
+    addressLatLng?:LatLng
     paymentId!: string;
-    createAt!: string;
+    createdAt!: string;
     status!: string;
 }

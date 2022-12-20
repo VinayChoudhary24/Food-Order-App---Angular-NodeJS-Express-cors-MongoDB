@@ -50,3 +50,7 @@ export const ORDER_NEW_FOR_CURRENT_USER_URL = ORDER_URL + '/newOrderForCurrentUs
 // This will Connect the Backend Payment Api to Frontend
 // This Will get the Payment Details From Payment Page
 export const ORDER_PAY_URL = ORDER_URL + '/pay';
+
+// This will Connect the Backend Track Order Api to Frontend
+// This Will get the OrderId From Payment Page
+export const ORDER_TRACK_URL = ORDER_URL + '/track/';

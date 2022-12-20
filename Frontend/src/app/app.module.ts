@@ -28,6 +28,8 @@ import { MapComponent } from './components/partials/map/map.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
+import { RazorpayButtonComponent } from './components/partials/razorpay-button/razorpay-button.component';
+import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 // import { ToastrModule } from 'ngx-toastr';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -53,6 +55,8 @@ import { PaypalButtonComponent } from './components/partials/paypal-button/paypa
     MapComponent,
     PaymentPageComponent,
     PaypalButtonComponent,
+    RazorpayButtonComponent,
+    OrderTrackPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -68,6 +68,15 @@ router.post('/pay', asyncHandler(
     }
 ))
 
+// the Api for Tracking Order Page
+router.get('/track/:id', asyncHandler(
+    async (req, res) => {
+        // Get the Order By Id from Req.Body
+        const order = await OrderModel.findById(req.params.id);
+        res.send(order);
+    }
+))
+
 // 
 async function getNewOrderForCurrentUser(req:any) {
     return await OrderModel.findOne({user: req.user.id, status: OrderStatus.NEW});

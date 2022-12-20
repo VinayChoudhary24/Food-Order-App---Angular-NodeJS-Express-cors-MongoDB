@@ -53,17 +53,15 @@ export class LoginPageComponent implements OnInit {
   onSubmit() {
     this.isSubmitted = true;
     // The Cnditions of Valid and Invalid
-    if(this.loginForm.invalid) {
+    if(this.loginForm.invalid)
         this.loginMessage = "Login Failed...";
-    }else {
+    else {
     // If thelogin Form is valid
     // Show the Toastr Message For Succcess and Failed
     this.userService.login({
       email: this.formControl.email.value,
       password: this.formControl.password.value
-    })
-    // Subscribe to Show the Message
-    .subscribe( () => {
+    }).subscribe( () => {
       this.loginMessage = "Welcome to Madani!! Login Successful"
       setTimeout( () => {
         this.router.navigateByUrl(this.returnUrl);
