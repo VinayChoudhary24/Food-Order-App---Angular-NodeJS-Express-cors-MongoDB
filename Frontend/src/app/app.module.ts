@@ -30,6 +30,8 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 import { RazorpayButtonComponent } from './components/partials/razorpay-button/razorpay-button.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
+import { ShortenPipe } from './components/partials/pipe/shorten.pipe';
 // import { ToastrModule } from 'ngx-toastr';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -57,6 +59,8 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
     PaypalButtonComponent,
     RazorpayButtonComponent,
     OrderTrackPageComponent,
+    ProfilePageComponent,
+    ShortenPipe,
   ],
   imports: [
     BrowserModule,

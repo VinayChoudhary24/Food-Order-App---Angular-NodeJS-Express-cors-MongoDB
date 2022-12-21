@@ -10,6 +10,7 @@ import { User } from 'src/app/shared/models/User';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
 
    // To Store the Name of the User

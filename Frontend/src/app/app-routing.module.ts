@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 
 const routes: Routes = [
@@ -41,6 +42,9 @@ const routes: Routes = [
 
   // To Load the Order Tracking Page
   { path: 'track/:orderId', component: OrderTrackPageComponent, canActivate: [AuthGuard] },
+
+  // To Load the Profile Section of the User
+  { path: 'profile', component: ProfilePageComponent, canActivate: [AuthGuard] },
 
 ];
 

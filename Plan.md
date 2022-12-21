@@ -207,6 +207,17 @@
            --Add a Method in order.service
            --Add Ts, Html and Css to Show
 
+ # 14 Adding the Profile Section
+          --Generate Component -components/pages/profile-page --Add to Routes
+          
+
+ # 15 Updating the Whole Project i.e Frontend[Angular] and Backend[NEM]
+          --Install check-update --npm install -g npm-check-updates
+          --Inside Frontend Write i.e cd Frontend --ncu and Run -ncu -u && -npm install --force
+          --Inside the Backend Folder Write --ncu -u && npm install
+
+             
+
                 
                                              
 

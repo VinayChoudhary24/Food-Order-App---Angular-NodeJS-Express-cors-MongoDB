@@ -1,0 +1,101 @@
+/* The Heading of the Page */
+.heading {
+  margin: 5px;
+  padding: 5px;
+}
+
+/* The Main Container */
+.container {
+  /* border: 1px solid; */
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* This Conains the User Details */
+.details {
+  /* border: 1px solid brown; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.details span {
+  font-size: large;
+}
+
+/* The name of the USer */
+.name {
+  border: 2px solid whitesmoke;
+  box-shadow: 0px 1px 5px 1px #880D1E;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* The email of the USer */
+.email {
+  border: 2px solid whitesmoke;
+  box-shadow: 0px 1px 5px 1px #880D1E;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* The address of the USer */
+.address {
+  border: 2px solid whitesmoke;
+  box-shadow: 0px 1px 5px 1px #880D1E;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* the Main Sections Container */
+.sections__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  /* padding-bottom: 80px; */
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* Section */
+.section {
+  color: #fff;
+  text-align: center;
+}
+
+/* Section Image */
+.section__image {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.image {
+  height: 100%;
+  /* margin-bottom: 42px; */
+  border-style: none;
+}
+
+/* The First Text Written */
+.textOne {
+  color: #880D1E;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+/* the Second Text Written */
+.textTwo {
+  font-size: 15px;
+  font-style: oblique;
+  width: 260px;
+  /* margin-top: 10px; */
+  color:  brown;
+  /* line-height: 1.3 */
+}

@@ -62,7 +62,8 @@
           <li *ngIf="isAuth" class="user__menu">
             <div class="dropdown">
               <!-- Get the Name of user from userName Property -->
-              <a routerLink="/dashboard">{{user.name}}</a>
+              <!-- Use the Pipe to Only Show First 8 Characters of Name -->
+              <a routerLink="/dashboard">{{user.name | shortenPipe}}</a>
 
             <!-- The Othe Features -->
             <div class="dropdown__menu">

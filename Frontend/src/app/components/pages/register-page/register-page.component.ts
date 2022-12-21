@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { UserRegister } from 'src/app/shared/interfaces/UserRegister';
+import { User } from 'src/app/shared/models/User';
 import { PasswordsMatchValidator } from 'src/app/shared/validators/password_match_validator';
 
 @Component({
-  selector: 'app-register-page',
+  selector: 'register-page',
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.css']
 })
 export class RegisterPageComponent implements OnInit {
+
+  // Store the User
+  @Input() user!: User;
 
   // The Register Form
   registerForm!: FormGroup;
