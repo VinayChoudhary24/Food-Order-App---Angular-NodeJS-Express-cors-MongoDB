@@ -1,9 +1,27 @@
 /* The Header TAG */
-header {
-  position: relative;
-  background-color: white;
-  padding: 0;
-  border-bottom: 1px solid lightgray;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    border-bottom: 1px solid #F0F600;
+  }  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    position: relative;
+    background-color: white;
+    padding: 0;
+    border-bottom: 1px solid #F0F600;
+  }  
 }
 
 /* All the a TAGs inside the Header */
@@ -29,11 +47,23 @@ header a:hover {
 }
 
 /* The Name of the Application */
-.name {
-  font-family: "Quicksand", "sans-serif";
-  font-size: large;
-  font-weight: bold;
-  padding: 10px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .name {
+    font-family: "Quicksand", "sans-serif";
+    font-size: medium;
+    font-weight: bold;
+    /* padding: 10px; */
+  }  
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .name {
+    font-family: "Quicksand", "sans-serif";
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+  }
 }
 
 /* The search field and Icon */
@@ -44,36 +74,85 @@ header a:hover {
 }
 
 /* The Search ABr Input Field */
-.search__input {
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-  height: 35px;
-  width: 265px;
-  padding: 7px;
-  border: 1px solid darkgray;
-  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
-  border-radius: 15px;
-  display: flex;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .search__input {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    border-radius: 10px;
+    height: 30px;
+    width: 70px;
+    padding: 7px;
+    outline: none;
+    border: 1px solid #B57BA6;
+    box-shadow: 0px 2px 5px -2px #B57BA6;
+    display: flex;
+  }  
 }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .search__input {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border-radius: 15px;
+    height: 35px;
+    width: 265px;
+    padding: 7px;
+    outline: none;
+    border: 1px solid #B57BA6;
+    box-shadow: 0px 2px 5px -2px #B57BA6;
+    display: flex;
+  }
+}
+
 
 /* The Search Icon in the Input */
-.search__icon {
-  cursor: pointer;
-  color: brown;
-  position: absolute;
-  left: 34.5%;
-  bottom: 13px;
-  font-size: 17px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .search__icon {
+    cursor: pointer;
+    color: brown;
+    position: absolute;
+    left: 41%;
+    bottom: 9px;
+    font-size: 17px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .search__icon {
+    cursor: pointer;
+    color: brown;
+    position: absolute;
+    left: 34.5%;
+    bottom: 13px;
+    font-size: 17px;
+  }
 }
 
+
 /* The Services Logo Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .services__logo {
+  display: none;
+  flex: 0.5;
+  justify-content: space-between;
+  align-items: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 .services__logo {
   /* border: 1px solid yellow; */
   display: flex;
   flex: 0.5;
   justify-content: space-between;
   align-items: center;
+}
 }
 
 /* This Container for User Details */

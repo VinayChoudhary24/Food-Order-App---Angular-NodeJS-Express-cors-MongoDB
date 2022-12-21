@@ -27,7 +27,7 @@
 .food__details {
   /* border: 1px solid yellow; */
   /* border-radius: 10%; */
-  border-left: 3px solid lightgray;
+  border-left: 3px solid #E3B505;
   background-color: white;
   margin: 5px;
   padding: 15px;
@@ -101,37 +101,41 @@
   font-family: "Quicksand", "sans-serif";
   padding: 8px;
   outline: none;
-  border-radius: 8rem;
+  border-radius: 7rem;
+  opacity: 0.8;
+}
+.addTo__cart:hover {
+  opacity: 1;
 }
 
 /* the Main Sections Container */
 .sections__container {
-  position: relative;
+  /* border: 1px solid; */
   display: flex;
   justify-content: space-between;
-  /* padding-bottom: 80px; */
+  /* padding-bottom: 200px; */
   max-width: 1200px;
   min-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 /* Section */
 .section {
+  margin-bottom: 5px;
   color: #fff;
   text-align: center;
 }
 
 /* Section Image */
 .section__image {
-  height: 250px;
+  height: 200px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
 .image {
-  height: 100%;
   /* margin-bottom: 42px; */
   border-style: none;
 }

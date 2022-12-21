@@ -10,6 +10,7 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
+import { RazorpayButtonComponent } from './components/partials/razorpay-button/razorpay-button.component';
 
 const routes: Routes = [
 
@@ -45,6 +46,9 @@ const routes: Routes = [
 
   // To Load the Profile Section of the User
   { path: 'profile', component: ProfilePageComponent, canActivate: [AuthGuard] },
+
+  // To Load the RazorPay Payment Section For the User
+  { path: 'razorpay', component: RazorpayButtonComponent, canActivate: [AuthGuard] },
 
 ];
 

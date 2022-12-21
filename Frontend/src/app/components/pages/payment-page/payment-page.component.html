@@ -22,7 +22,7 @@
   </div>
 
   <!-- the MAP Section -->
-  <div class="map">
+  <div class="right__section">
       <!-- app title Component -->
       <app-cart-page-title
       title="Shipping Address"
@@ -31,11 +31,13 @@
       <!-- Render the MAP Component -->
       <!-- Define [order] to get the Location by Clicking the Button Find My Location -->
       <!-- [readonly] will Show Just Marker Selected from Checkoout Page -->
-      <map [order]="order" [readonly]="true"></map>
+      <map class="map" [order]="order" [readonly]="true"></map>
 
       <!-- The Buttons Container --Payment Button -->
       <div class="buttons__container">
           <div class="buttons">
+            <!-- the RazorPay Button -->
+              <a routerLink="/razorpay"><button id="pay-button" style="background-color: #1e40a0; margin-bottom: 1rem;">UPI Payments</button></a>
               <!-- Render the Paypal Button -->
               <!-- Pass the Stored Order -->
               <paypal-button [order]="order"></paypal-button>
@@ -43,4 +45,3 @@
       </div>
   </div>
 </div>
-
