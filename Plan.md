@@ -216,6 +216,7 @@
           --Inside Frontend Write i.e cd Frontend --ncu and Run -ncu -u && -npm install --force
           --Inside the Backend Folder Write --ncu -u && npm install
 
+ # 16 Making Application Responsive 
              
 
                 

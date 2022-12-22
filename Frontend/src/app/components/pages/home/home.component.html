@@ -52,9 +52,10 @@
 </div>
 
 <!-- This will show the Food Tags -->
+<!-- ({{ tag.count }}) To Show the Count -->
 <div class="tags">
   <a *ngFor="let tag of tags" routerLink="/tag/{{tag.name}}">
-    {{ tag.name }}({{ tag.count }})
+    {{ tag.name }}
   </a>
 </div>
 

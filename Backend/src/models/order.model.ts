@@ -47,7 +47,7 @@ export interface Order {
     // Store the ID of the User
     user: Types.ObjectId;
     createAt: Date;
-    updatedAt: Date; 
+    updatedAt: Date;
 }
 
 // Schema for Order --Define in mongoose types --for MongoDB
@@ -60,7 +60,7 @@ const orderSchema = new Schema<Order>(
         totalPrice: {type: Number, required: true},
         items: {type: [OrderItemSchema], required: true},
         status: {type: String, default: OrderStatus.NEW},
-        user: {type: Schema.Types.ObjectId, required: true}
+        user: {type: Schema.Types.ObjectId, required: true},
     },{
         // Options
         timestamps: true,

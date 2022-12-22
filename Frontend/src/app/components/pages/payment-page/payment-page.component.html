@@ -21,13 +21,14 @@
   <order-items-list [order]="order"></order-items-list>
   </div>
 
-  <!-- the MAP Section -->
-  <div class="right__section">
-      <!-- app title Component -->
-      <app-cart-page-title
-      title="Shipping Address"
-      fontSize="1.3rem"></app-cart-page-title>
+  <div>
+    <!-- app title Component -->
+  <app-cart-page-title
+  title="Shipping Address"
+  fontSize="1.3rem"></app-cart-page-title>
 
+    <!-- the MAP Section -->
+    <div class="right__section">
       <!-- Render the MAP Component -->
       <!-- Define [order] to get the Location by Clicking the Button Find My Location -->
       <!-- [readonly] will Show Just Marker Selected from Checkoout Page -->
@@ -43,5 +44,6 @@
               <paypal-button [order]="order"></paypal-button>
           </div>
       </div>
+    </div>
   </div>
 </div>

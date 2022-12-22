@@ -11,6 +11,7 @@ export class Food {
   imageUrl!: string;
   origins!: string[];
   cookTime!: string;
+  description!: string;
 }
 
   // constructor( id: string, name: string, price: number, tags: string[], favorite: boolean, stars: number,

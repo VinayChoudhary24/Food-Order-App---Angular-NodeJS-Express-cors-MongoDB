@@ -1,41 +1,71 @@
 /* The Main Container of the Food Item */
-.container {
-  display: flex;
-  justify-content: center;
-  margin: 10px 15px 0px 15px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 15px 0px 15px;
+  }
 }
 
-/* The Image Container */
-/* .container__image {
-  border: 1px solid lightgray;
-  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
-  margin: 5px;
-  padding: 5px;
-} */
+/* The Details of the Food i.e name, ratings, time, price .... */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .food__details {
+    /* border: 1px solid yellow; */
+    /* border-left: 3px solid #E3B505; */
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: grid;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .food__details {
+    /* border: 1px solid yellow; */
+    /* border-radius: 10%; */
+    border-left: 3px solid #E3B505;
+    background-color: white;
+    margin: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
 
 /* The Image of the Food Item */
-.food__image {
-  /* width: 500px; */
-  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
-  height: 300px;
-  object-fit: cover;
-  border-radius: 20px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .food__image {
+    margin-top: 5px;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .food__image {
+    /* width: 500px; */
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }
 
-/* The Name and Favorite Container */
-.food__details {
-  /* border: 1px solid yellow; */
-  /* border-radius: 10%; */
-  border-left: 3px solid #E3B505;
-  background-color: white;
-  margin: 5px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 
 /* The Name of the FooD */
 .name {
@@ -44,6 +74,10 @@
   font-size: larger;
   color: brown;
   /* margin-right: 100px;  */
+}
+
+.rating {
+  margin-top: -10px;
 }
 
 /* TheCookTime Required */
@@ -93,47 +127,104 @@
 }
 
 /* The Button to add to Cart */
-.addTo__cart {
-  color: white;
-  background: #e72929;
-  border: 1px solid darkgray;
-  font-size: medium;
-  font-family: "Quicksand", "sans-serif";
-  padding: 8px;
-  outline: none;
-  border-radius: 7rem;
-  opacity: 0.8;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .addTo__cart {
+    margin-top: 5px;
+    color: white;
+    background: #e72929;
+    border: 1px solid darkgray;
+    font-size: medium;
+    font-family: "Quicksand", "sans-serif";
+    padding: 8px;
+    outline: none;
+    border-radius: 7rem;
+    opacity: 1;
+  }
 }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .addTo__cart {
+    color: white;
+    background: #e72929;
+    border: 1px solid darkgray;
+    font-size: medium;
+    font-family: "Quicksand", "sans-serif";
+    padding: 8px;
+    outline: none;
+    border-radius: 7rem;
+    opacity: 0.8;
+  }
+}
+
 .addTo__cart:hover {
   opacity: 1;
 }
 
-/* the Main Sections Container */
-.sections__container {
-  /* border: 1px solid; */
-  display: flex;
-  justify-content: space-between;
-  /* padding-bottom: 200px; */
-  max-width: 1200px;
-  min-width: 1200px;
-  margin: 0 auto;
-  /* margin-bottom: 10px; */
+
+/* the Main Sections Container i.e Footer */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .sections__container {
+    display: grid;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .sections__container {
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    /* padding-bottom: 200px; */
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    /* margin-bottom: 10px; */
+  }
 }
 
-/* Section */
-.section {
-  margin-bottom: 5px;
-  color: #fff;
-  text-align: center;
+/* Section i.e Image And Text Lines */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .section {
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: center;
+  }
 }
 
 /* Section Image */
-.section__image {
-  height: 200px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section__image {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
 }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .section__image {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
 
 .image {
   /* margin-bottom: 42px; */

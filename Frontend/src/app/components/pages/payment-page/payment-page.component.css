@@ -1,22 +1,50 @@
 /* the Main Container */
-.container {
-  margin-top: 1rem;
-  display: flex;
-  margin: 0 1rem 1rem 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    margin-top: 1rem;
+    display: flex;
+    margin: 0 1rem 1rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* This Contains the Form and order-items-List */
-.content {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-  padding: 2px;
-  width: 35rem;
-  margin-right: 4rem;
-  border: 1px solid lavender;
-  border-radius: 10px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid lavender;
+    border-radius: 10px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 2px;
+    width: 35rem;
+    margin-right: 4rem;
+    border: 1px solid lavender;
+    border-radius: 10px;
+  }
 }
 
 /* The Summary Section */
@@ -51,22 +79,50 @@
 }
 
 /* the Buttons Container */
-.buttons {
-  margin: 0.4rem;
-  width: 20rem;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .buttons {
+    margin: 10px 0px 0px 0px;
+    width: 15rem;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .buttons {
+    margin: 0.4rem;
+    width: 20rem;
+  }
 }
 
 /* the Go To Payment Button */
-button {
-  color: white;
-  background-color: #e72929;
-  width: 100%;
-  height: 3rem;
-  opacity: 0.9;
-  font-size: 1.3rem;
-  border: none;
-  border-radius: 0.5rem;
-  /* box-shadow: 2px 2px 2px 2px grey; */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  button {
+    padding: 5px 5px;
+    color: white;
+    background-color: #e72929;
+    width: 100%;
+    height: 3rem;
+    opacity: 0.9;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    /* box-shadow: 2px 2px 2px 2px grey; */
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  button {
+    color: white;
+    background-color: #e72929;
+    width: 100%;
+    height: 3rem;
+    opacity: 0.9;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    /* box-shadow: 2px 2px 2px 2px grey; */
+  }
 }
 
 button:hover {

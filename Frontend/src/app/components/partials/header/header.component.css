@@ -2,16 +2,18 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   header {
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     position: relative;
     height: 40px;
     width: 100%;
     background-color: white;
     padding: 0;
+    margin: 0px 0px;
     border-bottom: 1px solid #F0F600;
-  }  
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -21,7 +23,7 @@
     background-color: white;
     padding: 0;
     border-bottom: 1px solid #F0F600;
-  }  
+  }
 }
 
 /* All the a TAGs inside the Header */
@@ -38,13 +40,28 @@ header a:hover {
 }
 
 /* The Section Contains All Section i. Main Container for Options */
-.container__options {
-  margin: 0 auto;
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container__options {
+    margin: 0px 10px 0px 5px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container__options {
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
 
 /* The Name of the Application */
 /* Extra small devices (phones, 600px and down) */
@@ -53,8 +70,9 @@ header a:hover {
     font-family: "Quicksand", "sans-serif";
     font-size: medium;
     font-weight: bold;
+    margin-right: 5px;
     /* padding: 10px; */
-  }  
+  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -77,18 +95,22 @@ header a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .search__input {
+    margin-left: 5px;
+    text-align: start;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    border-radius: 10px;
-    height: 30px;
-    width: 70px;
-    padding: 7px;
+    font-size: 11px;
+    border-radius: 5px;
+    height: 23px;
+    width: 125px;
+    /* padding: 7px; */
     outline: none;
     border: 1px solid #B57BA6;
     box-shadow: 0px 2px 5px -2px #B57BA6;
     display: flex;
-  }  
+    justify-content: center;
+    align-items: center;
+  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -97,7 +119,7 @@ header a:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     border-radius: 15px;
-    height: 35px;
+    height:35px;
     width: 265px;
     padding: 7px;
     outline: none;
@@ -113,11 +135,11 @@ header a:hover {
 @media only screen and (max-width: 600px) {
   .search__icon {
     cursor: pointer;
-    color: brown;
+    color: rgb(186, 44, 44);
     position: absolute;
-    left: 41%;
-    bottom: 9px;
-    font-size: 17px;
+    left: 54.5%;
+    bottom:10px;
+    font-size: 14px;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -156,22 +178,52 @@ header a:hover {
 }
 
 /* This Container for User Details */
-.user__details {
-  font-size: larger;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  position: relative;
-  display: flex;
-  align-items: center;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .user__details {
+    font-size: larger;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .user__details {
+    font-size: larger;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* UnOrdered List inside the user Details */
-.user__details ul {
-  width: 200px;
-  /* border: 1px solid green; */
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  margin: 0;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .user__details ul {
+    width: 150px;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    list-style-type: none;
+    margin: 0px 0px 0px -30px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .user__details ul {
+    width: 200px;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+  }
 }
 
 .user__details ul a {
