@@ -1,9 +1,7 @@
 {
     "name": "madani",
     "version": "1.0.0",
-    "engines": {
-        
-    },
+    
     "scripts": {
         "start": "cd Backend/built && node server.js",
         "prebuild": "cd Backend && npm run build",
