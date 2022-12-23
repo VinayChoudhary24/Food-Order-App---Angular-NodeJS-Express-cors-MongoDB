@@ -1,12 +1,13 @@
 // Import connect and ConnectOptions to Make a Connection with DB
-import { connect, ConnectOptions } from "mongoose";
+import mongoose, { connect, ConnectOptions } from "mongoose";
 
 // Create a Function to Export Outside and Use it is Server.ts
 // Now we Can Access the .env File with process.env.
 // process.env.MONGO_URI
 export const dbConnect = () => {
     // Putting ! will Tell Compiler that this Value is Always Present and is Not Undefined
-    // connect returns a PROMISE, we use .then() 
+    // connect returns a PROMISE, we use .then()
+    mongoose.set("strictQuery", false); 
     connect(process. env. MONGO_URI!, {
         useNewUrlParser: true,
         useUnifiedTopology: true 
