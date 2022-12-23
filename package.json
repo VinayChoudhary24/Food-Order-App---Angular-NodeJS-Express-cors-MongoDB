@@ -1,10 +1,10 @@
 {
     "name": "madani",
     "version": "1.0.0",
-    
+
     "scripts": {
         "start": "cd Backend/built && node server.js",
         "prebuild": "cd Backend && npm run build",
-        "build": "cd Frontend && npm run build"
+        "build": "cd Frontend && npm run start"
     }
 }
